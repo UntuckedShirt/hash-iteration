@@ -8,4 +8,11 @@
 
 def select_winner(passengers)
   # add the code snippet here!
-end
+    winner = nil
+    passengers.each do |room, person|
+      if room == :suite_a && person.start_with?("A")
+        winner = person
+      end
+    end
+    winner
+  end
